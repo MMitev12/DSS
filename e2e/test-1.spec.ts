@@ -1,10 +1,9 @@
 import { test, expect } from "@playwright/test";
-import { environment } from "../student-gradesy";
 
 test("test", async ({ page }) => {
   await Promise.all([
     page.waitForLoadState("networkidle"),
-    page.goto(environment.URL),
+    page.goto("http://localhost:3000/"),
   ]);
 
   /* Check list */
